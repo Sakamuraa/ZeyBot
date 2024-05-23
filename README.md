@@ -11,8 +11,9 @@ Simply using `npm install` and `npm run start`
 # Developer
 <img src="https://cdn.discordapp.com/avatars/880055530721247253/d93f725297846fea6e05658d9c5b603b.png?size=2048" width="100" height="100"> <br>
 The developer of this source-code is [Sakamura](https://discordapp.com/users/880055530721247253)
-## Term of Service
-This is an open-source app with all the considerations i have thought about carefully. If this is bought and sold, it is beyond my responsibility as the owner of the source-code.
+## Licensing / Liability
+This Discord bot is named after, but has no association to the virtual YouTuber [Zeyayaya](https://www.youtube.com/@ZeyaHaize), or their fan/viewer (fanbase) named [Pond of Dream](https://discord.gg/xsKTqMmwmb).
 
-<br>
-with APACHE-2.0 LICENSE
+ZeyBot is licensed under the Apache 2.0 license, viewable in the [LICENSE](https://github.com/Sakamuraa/ZeyBot/blob/main/LICENSE) file. 
+
+This is an open-source repo with all the considerations i have thought about carefully. If this is bought and sold, it is beyond my responsibility.
