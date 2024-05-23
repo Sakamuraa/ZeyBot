@@ -14,4 +14,5 @@ The developer of this source-code is [Sakamura](https://discordapp.com/users/880
 ## Term of Service
 This is an open-source app with all the considerations i have thought about carefully. If this is bought and sold, it is beyond my responsibility as the owner of the source-code.
 
-### With APACHE LICENSE
+
+with APACHE LICENSE 2.0
