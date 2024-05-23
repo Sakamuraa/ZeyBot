@@ -25,8 +25,6 @@ const eventHandler = require('./src/handlers/eventHandler.js');
 
 const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 const youtubeApiUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=live&type=video';
-const discordApiKey = process.env.DISCORD_API_KEY;
-const discordApiUrl = `https://discordapp.com/api/webhooks/${discordApiKey}`;
 const discordChannelId = process.env.DISCORD_CHANNEL_ID || null;
 
 const youtubeChannels = [
@@ -114,7 +112,8 @@ async function fetchLiveStreamStatus() {
                         }
 
                         let channelDC = client.channels.cache.get(discordChannelId);
-
+                        
+                        // change the Thumbnail and Author iconURL to your youtube channel selection
                         const embud = new EmbedBuilder()
                             .setAuthor({ 
                                 name: `${element.snippet.channelTitle} lagi live!`,
@@ -132,13 +131,6 @@ async function fetchLiveStreamStatus() {
                             })
                             .setColor('#f21818')
                             .setTimestamp(new Date());
-                            
-                        /* const discordObj = {
-                            username: 'Dumpster LIVE',
-                            avatar_url: 'https://yt3.ggpht.com/a/AGF-l7__zvPRgglwpeA85-NPjkxRlhi46IG3wKdwKg=s288-c-k-c0xffffffff-no-rj-mo',
-                            content: `Richlife is LIVE. **${element.snippet.title}**. Channel: ${youtubeChannel.channelUrl}`
-                        }
-                        postToDiscord(discordObj); */
                         
                         channelDC.send({ content: `<@&1240273115590819921> lagi live nih!!! Yuk nonton disini!\nhttps://www.youtube.com/watch?v=${element.id.videoId}`, embeds: [embud] });
                     } else {
@@ -152,47 +144,9 @@ async function fetchLiveStreamStatus() {
     }
 }
 
-/* async function postToDiscord(json) {
-    const resp = fetch(discordApiUrl, {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrer: 'no-referrer',
-        body: JSON.stringify(json)
-    }).catch(error => console.log('Discord POST failed.', JSON.stringify(json), error));
-
-    const content = await resp.json();
-    console.log('Discord response', content); 
-}
-
-async function herokuKeepAlive() {
-    try {
-        const response = await fetch(herokuApp);
-        console.log('Heroku Keep-Alive Success')
-    } catch(error) {
-        console.error(error);
-    }
-}
-
-app.get('/', (req, res) => res.send('Shhh! Im busy monitoring Youtube Channels.'));
-app.listen(port, () => {
-    console.log(`App listening on port ${port}!`)
-    setInterval(fetchLiveStreamStatus, youtubeFetchTimeout);
-    if(herokuApp) {
-        setInterval(herokuKeepAlive, 600000); // Heroku will sleep the app if it's not accessed, so access itself to keep-alive
-    }
-}) */
-
-/* const { initializeMongoose } = require("./src/database/mongoose");
-const Guild = require("./src/database/schemas/Guild");
-initializeMongoose(); */
-
  async function handleUploads() {
     await fetchLiveStreamStatus();
     setInterval(fetchLiveStreamStatus, youtubeFetchTimeout);
 } 
 
-// EVENT
+// END OF EVENT
