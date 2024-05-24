@@ -3,6 +3,8 @@
 Quick and dirty, simple [Discord](https://discord.com/) bot that polls the YouTube Data API and will post notifications to Discord chats
 
 # How to Run the Bot
+- Rename `.env.example` to `.env`
+- Fill the `.env`, `config.js`, `config.json` file <br>
 Simply using `npm install` and `npm run start`
 ## Requirements
 - nodejs v18
