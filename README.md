@@ -1,6 +1,7 @@
 # ZeyBot
 <img src="https://yt3.googleusercontent.com/m_RK-tlTnywYzMBmYzoBKObBfKZA0PRD8-tNJn77sHJUalY_0vn0OIyleotjcgVXnqktb9QJ=s900-c-k-c0x00ffffff-no-rj" width="100" height="100"> <br>
-Quick and dirty, simple [Discord](https://discord.com/) bot that polls the YouTube Data API and will post notifications to Discord chats
+Quick and dirty, simple [Discord](https://discord.com/) bot that polls the YouTube Data API and will post notifications to Discord chats. <br>
+Will be launched once everything is ready. For more information join our [Discord server](https://discord.gg/Vjsgu3c8B4).
 
 # How to Run the Bot
 - Rename `.env.example` to `.env`
