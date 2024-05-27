@@ -94,7 +94,6 @@ async function fetchLiveStreamStatus() {
         // for(const youtubeChannel of youtubeChannels) {
             const youtubeChannel = youtubeChannels[0];
             console.log('Memproses channel ', JSON.stringify(youtubeChannel));
-            // https://www.googleapis.com/youtube/v3/search?part=snippet&eventType=live&type=video&channelId=UC54JqsuIbMw_d1Ieb4hjKoQ&key=AIzaSyAAP2793O2XL_L-_WELeGVZyGZS5o7484s
             const url = `${youtubeApiUrl}&channelId=${youtubeChannel.channelId}&key=${youtubeApiKey}`;
             const response = await fetch(url);
             const myJson = await response.json();
