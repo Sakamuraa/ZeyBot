@@ -1,13 +1,13 @@
 {
-  "name": "dumpster-live-alert",
-  "version": "1.0.0",
-  "description": "",
+  "name": "zeybot",
+  "version": "1.5.0",
+  "description": "A Youtube-Livestream notification with Discordjs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sakamura",
   "license": "ISC",
   "dependencies": {
     "@discordjs/rest": "^2.3.0",
